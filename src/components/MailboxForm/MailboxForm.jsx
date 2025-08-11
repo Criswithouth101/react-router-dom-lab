@@ -15,7 +15,7 @@ export default function MailboxForm({ addBox }) {
   return (
     <form onSubmit={handleSubmit}>
       <label>
-        Box Owner:
+        Owner Name:
         <input
           type="text"
           value={boxOwner}
@@ -27,9 +27,9 @@ export default function MailboxForm({ addBox }) {
       <label>
         Box Size:
         <select value={boxSize} onChange={(e) => setBoxSize(e.target.value)}>
-          <option>Small</option>
-          <option>Medium</option>
-          <option>Large</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
         </select>
       </label>
 
@@ -37,3 +37,4 @@ export default function MailboxForm({ addBox }) {
     </form>
   );
 }
+
